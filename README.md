@@ -15,6 +15,8 @@ The application displays two fragments side by side, the first will trigger acti
 ## Implementation
 Basically, the view will trigger an invoke the increment() function from action module, the latter will send the event to the store via the dispatcher, the store will update his variables and send a notification to the UI that something as change.
 
+My implementation is based on [RxJava](https://github.com/ReactiveX/RxJava)
+
 ## Plugins and side effects
 According to the schema, the view should only react to the events emitted by the store. In this case the view can even react to anything. But It makes you the possibility to create plugin. I have a Logger plugin that will print on the console all the event that are triggered.
 
@@ -26,8 +28,6 @@ Flux allows you to have dependencies between store and wait for so actions to be
 
 ## Conclusion
 The concept is interesting. It may be a strong solution to do reactive programmation on a large scale. My concern is only if you trigger an action in a reaction to an event. You may be in a case of an infinity event loop, debugging with this kind of architecture could be a bit tricky.
-
-[Lucas Nelaupe](https://github.com/ReactiveX/RxJava)
 
 
 ## Contributors
