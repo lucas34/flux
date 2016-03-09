@@ -10,6 +10,7 @@ In this case
 * Store : Contains the counter state (value)
 * Action : Possible actions such as "increment() and decrement()
 
+The application displays two fragments side by side, the first will trigger actions base on user events and the second fragment will react. The counter on the right fragment is directly inside the fragment and the one on the right comes from the store. As you can see, they are keep showing the same number.
 
 ## Implementation
 Basically, the view will trigger an invoke the increment() function from action module, the latter will send the event to the store via the dispatcher, the store will update his variables and send a notification to the UI that something as change.
