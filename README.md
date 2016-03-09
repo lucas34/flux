@@ -17,7 +17,7 @@ Basically, the view will trigger an invoke the increment() function from action 
 ## Plugins and side effects
 According to the schema, the view should only react to the events emitted by the store. In this case the view can even react to anything. But It makes you the possibility to create plugin. I have a Logger plugin that will print on the console all the event that are triggered.
 
-## Some elements that are missing
+## Missing features
 
 In the facebook's implementation, they disallow [Eventception](https://github.com/facebook/flux/blob/ac1e4970c2a85d5030b65696461c271ba981a2a6/src/Dispatcher.js#L184)
 
