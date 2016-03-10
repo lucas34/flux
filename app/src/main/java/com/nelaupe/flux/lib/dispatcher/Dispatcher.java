@@ -15,18 +15,18 @@ import rx.functions.Action1;
  * Date 26/03/15
  */
 public class Dispatcher {
-    private final Bus bus;
     private static Dispatcher instance;
+    private final Bus bus;
+
+    Dispatcher(Bus bus) {
+        this.bus = bus;
+    }
 
     public static Dispatcher get(Bus bus) {
         if (instance == null) {
             instance = new Dispatcher(bus);
         }
         return instance;
-    }
-
-    Dispatcher(Bus bus) {
-        this.bus = bus;
     }
 
     public <T> Subscription register(Class<T> klass, Action1<T> action1) {

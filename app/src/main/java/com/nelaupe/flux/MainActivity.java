@@ -3,10 +3,10 @@ package com.nelaupe.flux;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
+import com.nelaupe.flux.lib.dispatcher.Bus;
+import com.nelaupe.flux.lib.dispatcher.Dispatcher;
 import com.nelaupe.flux.plugins.Logger;
 import com.nelaupe.flux.plugins.Notifier;
-import com.nelaupe.flux.lib.dispatcher.Dispatcher;
-import com.nelaupe.flux.lib.dispatcher.Bus;
 
 public class MainActivity extends AppCompatActivity {
 

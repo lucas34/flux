@@ -26,7 +26,7 @@ public abstract class Plugin {
     abstract Subscription onRegister(Dispatcher dispatcher);
 
     public void unregister() {
-        if(_subscriptions != null) {
+        if (_subscriptions != null) {
             _subscriptions.unsubscribe();
         }
     }

@@ -12,8 +12,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.nelaupe.flux.R;
-import com.nelaupe.flux.lib.dispatcher.Dispatcher;
 import com.nelaupe.flux.lib.dispatcher.Bus;
+import com.nelaupe.flux.lib.dispatcher.Dispatcher;
 import com.nelaupe.flux.lib.store.CounterState;
 
 import rx.functions.Action1;

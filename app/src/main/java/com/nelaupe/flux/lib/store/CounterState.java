@@ -3,12 +3,10 @@
  */
 package com.nelaupe.flux.lib.store;
 
-import com.nelaupe.flux.lib.dispatcher.Dispatcher;
 import com.nelaupe.flux.lib.action.events.Event;
 import com.nelaupe.flux.lib.action.events.OnDecrement;
 import com.nelaupe.flux.lib.action.events.OnIncrement;
-
-import rx.functions.Action1;
+import com.nelaupe.flux.lib.dispatcher.Dispatcher;
 
 /**
  * Created with IntelliJ
@@ -34,20 +32,14 @@ public class CounterState extends Store {
 
     private void init() {
 
-        dispatcher.register(OnIncrement.class, new Action1<OnIncrement>() {
-            @Override
-            public void call(OnIncrement onIncrement) {
-                counter++;
-                notifyUi();
-            }
+        dispatcher.register(OnIncrement.class, onIncrement -> {
+            counter++;
+            notifyUi();
         });
 
-        dispatcher.register(OnDecrement.class, new Action1<OnDecrement>() {
-            @Override
-            public void call(OnDecrement onDecrement) {
-                counter--;
-                notifyUi();
-            }
+        dispatcher.register(OnDecrement.class, onDecrement -> {
+            counter--;
+            notifyUi();
         });
     }
 

@@ -13,8 +13,8 @@ import android.widget.TextView;
 
 import com.nelaupe.flux.R;
 import com.nelaupe.flux.lib.action.CounterActions;
-import com.nelaupe.flux.lib.dispatcher.Dispatcher;
 import com.nelaupe.flux.lib.dispatcher.Bus;
+import com.nelaupe.flux.lib.dispatcher.Dispatcher;
 
 /**
  * Created with IntelliJ

@@ -3,9 +3,9 @@
  */
 package com.nelaupe.flux.lib.action;
 
-import com.nelaupe.flux.lib.dispatcher.Dispatcher;
 import com.nelaupe.flux.lib.action.events.OnDecrement;
 import com.nelaupe.flux.lib.action.events.OnIncrement;
+import com.nelaupe.flux.lib.dispatcher.Dispatcher;
 
 /**
  * Created with IntelliJ
