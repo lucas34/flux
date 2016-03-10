@@ -36,7 +36,7 @@ public class CounterState extends Store {
 
         dispatcher.register(OnIncrement.class, new Action1<OnIncrement>() {
             @Override
-            public void call(OnIncrement onStartTyping) {
+            public void call(OnIncrement onIncrement) {
                 counter++;
                 notifyUi();
             }
@@ -44,7 +44,7 @@ public class CounterState extends Store {
 
         dispatcher.register(OnDecrement.class, new Action1<OnDecrement>() {
             @Override
-            public void call(OnDecrement onFinishTyping) {
+            public void call(OnDecrement onDecrement) {
                 counter--;
                 notifyUi();
             }
