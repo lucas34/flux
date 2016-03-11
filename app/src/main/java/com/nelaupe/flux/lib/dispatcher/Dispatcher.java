@@ -29,7 +29,7 @@ public class Dispatcher {
         return instance;
     }
 
-    public <T> Subscription register(Class<T> klass, Action1<T> action1) {
+    public <T extends Event> Subscription register(Class<T> klass, Action1<T> action1) {
         return bus.events().ofType(klass).subscribe(action1);
     }
 
