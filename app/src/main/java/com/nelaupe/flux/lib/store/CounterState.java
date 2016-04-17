@@ -47,6 +47,10 @@ public class CounterState extends Store {
         return String.valueOf(counter);
     }
 
+    public int getCounterInt() {
+        return counter;
+    }
+
     public void notifyUi() {
         dispatcher.post(new CounterUpdate());
     }

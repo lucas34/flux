@@ -18,16 +18,16 @@ import com.nelaupe.flux.lib.store.CounterState;
 public class SimpleTest extends InstrumentationTestCase {
 
     public void testFoo() {
-
-        Dispatcher dispatcher = Dispatcher.get(new Bus());
+        Dispatcher dispatcher = Dispatcher.init(new Bus());
         CounterActions actionsCreator = CounterActions.get(dispatcher);
         CounterState store = CounterState.get(dispatcher);
 
-        actionsCreator.startTyping();
-        assertTrue(store.getCounter());
+        assertTrue(store.getCounterInt() == 0);
+        actionsCreator.increment();
+        assertTrue(store.getCounterInt() == 1);
 
-        actionsCreator.stopTyping();
-        assertFalse(store.getCounter());
+        actionsCreator.decrement();
+        assertTrue(store.getCounterInt() == 0);
     }
 
 }
