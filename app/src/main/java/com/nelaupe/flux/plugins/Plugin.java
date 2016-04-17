@@ -27,7 +27,7 @@ public abstract class Plugin {
 
     public void unregister() {
         if (_subscriptions != null) {
-            _subscriptions.unsubscribe();
+            _subscriptions.clear();
         }
     }
 
