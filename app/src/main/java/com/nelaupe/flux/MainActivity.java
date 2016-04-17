@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        dispatcher = Dispatcher.get(new Bus());
+        dispatcher = Dispatcher.init(new Bus());
 
         logger = new Logger();
         toaster = new Notifier(this);

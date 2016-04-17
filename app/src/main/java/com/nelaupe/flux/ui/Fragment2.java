@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.nelaupe.flux.R;
-import com.nelaupe.flux.lib.dispatcher.Bus;
 import com.nelaupe.flux.lib.dispatcher.Dispatcher;
 import com.nelaupe.flux.lib.store.CounterState;
 
@@ -32,7 +31,7 @@ public class Fragment2 extends Fragment implements Action1<CounterState.CounterU
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        Dispatcher dispatcher = Dispatcher.get(new Bus());
+        Dispatcher dispatcher = Dispatcher.getInstance();
         store = CounterState.get(dispatcher);
 
         dispatcher.register(CounterState.CounterUpdate.class, this);

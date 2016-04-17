@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import com.nelaupe.flux.R;
 import com.nelaupe.flux.lib.action.CounterActions;
-import com.nelaupe.flux.lib.dispatcher.Bus;
 import com.nelaupe.flux.lib.dispatcher.Dispatcher;
 
 /**
@@ -32,7 +31,7 @@ public class Fragment1 extends Fragment implements View.OnClickListener {
         super.onCreate(savedInstanceState);
 
         counter = 0;
-        Dispatcher dispatcher = Dispatcher.get(new Bus());
+        Dispatcher dispatcher = Dispatcher.getInstance();
         actions = CounterActions.get(dispatcher);
     }
 

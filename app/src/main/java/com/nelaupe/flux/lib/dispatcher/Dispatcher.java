@@ -22,10 +22,12 @@ public class Dispatcher {
         this.bus = bus;
     }
 
-    public static Dispatcher get(Bus bus) {
-        if (instance == null) {
-            instance = new Dispatcher(bus);
-        }
+    public static Dispatcher init(Bus bus) {
+        instance = new Dispatcher(bus);
+        return instance;
+    }
+
+    public static Dispatcher getInstance() {
         return instance;
     }
 
